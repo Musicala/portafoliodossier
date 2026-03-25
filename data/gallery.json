@@ -1,0 +1,100 @@
+{
+  "gallery": [
+    {
+      "id": "img_001",
+      "title": "Explorando ritmos",
+      "category": "musica",
+      "type": "foto",
+      "src": "assets/gallery/musica_01.jpg",
+      "thumbnail": "assets/gallery/thumbs/musica_01.jpg",
+      "description": "Estudiantes explorando patrones rítmicos con percusión.",
+      "tags": ["ritmo", "percusión", "aprendizaje"],
+      "related": ["minijuego_ritmo"],
+      "featured": true
+    },
+    {
+      "id": "img_002",
+      "title": "Construcción de escenario",
+      "category": "interactivo",
+      "type": "foto",
+      "src": "assets/gallery/escenario_01.jpg",
+      "thumbnail": "assets/gallery/thumbs/escenario_01.jpg",
+      "description": "Niños creando su propio escenario dentro del juego.",
+      "tags": ["creatividad", "juego", "escenario"],
+      "related": ["minijuego_escenario"],
+      "featured": true
+    },
+    {
+      "id": "img_003",
+      "title": "Expresión corporal",
+      "category": "danza",
+      "type": "foto",
+      "src": "assets/gallery/danza_01.jpg",
+      "thumbnail": "assets/gallery/thumbs/danza_01.jpg",
+      "description": "Trabajo de expresión corporal en clase de danza.",
+      "tags": ["movimiento", "expresión", "cuerpo"],
+      "related": [],
+      "featured": false
+    },
+    {
+      "id": "img_004",
+      "title": "Colores en acción",
+      "category": "artes_plasticas",
+      "type": "foto",
+      "src": "assets/gallery/artes_01.jpg",
+      "thumbnail": "assets/gallery/thumbs/artes_01.jpg",
+      "description": "Exploración de mezcla de colores en actividad artística.",
+      "tags": ["color", "mezcla", "creatividad"],
+      "related": ["minijuego_colores"],
+      "featured": true
+    },
+    {
+      "id": "img_005",
+      "title": "Juego de memoria musical",
+      "category": "interactivo",
+      "type": "foto",
+      "src": "assets/gallery/memoria_01.jpg",
+      "thumbnail": "assets/gallery/thumbs/memoria_01.jpg",
+      "description": "Interfaz del minijuego de memoria musical en acción.",
+      "tags": ["memoria", "juego", "música"],
+      "related": ["minijuego_memoria"],
+      "featured": false
+    },
+    {
+      "id": "img_006",
+      "title": "Teatro emocional",
+      "category": "teatro",
+      "type": "foto",
+      "src": "assets/gallery/teatro_01.jpg",
+      "thumbnail": "assets/gallery/thumbs/teatro_01.jpg",
+      "description": "Exploración de emociones a través del teatro.",
+      "tags": ["emociones", "interpretación", "expresión"],
+      "related": ["minijuego_teatro"],
+      "featured": false
+    },
+    {
+      "id": "img_007",
+      "title": "Evento cultural",
+      "category": "eventos",
+      "type": "foto",
+      "src": "assets/gallery/evento_01.jpg",
+      "thumbnail": "assets/gallery/thumbs/evento_01.jpg",
+      "description": "Presentación artística en evento cultural.",
+      "tags": ["escenario", "presentación", "cultura"],
+      "related": ["fesicol"],
+      "featured": true
+    },
+    {
+      "id": "img_008",
+      "title": "Musi en acción",
+      "category": "personaje",
+      "type": "ilustracion",
+      "src": "assets/gallery/musi_01.png",
+      "thumbnail": "assets/gallery/thumbs/musi_01.png",
+      "description": "Musi explorando el mundo artístico del juego.",
+      "tags": ["musi", "personaje", "aventura"],
+      "related": ["universo_musi"],
+      "featured": true
+    }
+  ]
+}

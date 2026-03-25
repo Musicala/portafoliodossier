@@ -1,0 +1,117 @@
+{
+  "impact": {
+    "summary": {
+      "students_total": 1850,
+      "programs_active": 42,
+      "alliances_count": 8,
+      "events_held": 65,
+      "cities_reached": 5
+    },
+    "areas": [
+      {
+        "id": "educacion_artistica",
+        "title": "Educación artística integral",
+        "description": "Procesos formativos en música, danza, teatro y artes plásticas que desarrollan habilidades creativas, emocionales y cognitivas.",
+        "metrics": {
+          "students": 1500,
+          "hours": 12000,
+          "programs": 30
+        },
+        "highlights": [
+          "Formación interdisciplinaria",
+          "Aprendizaje basado en la experiencia",
+          "Desarrollo de habilidades expresivas"
+        ]
+      },
+      {
+        "id": "impacto_social",
+        "title": "Impacto social y comunitario",
+        "description": "Intervenciones en comunidades que promueven el acceso al arte como herramienta de transformación social.",
+        "metrics": {
+          "communities": 18,
+          "beneficiaries": 2200,
+          "projects": 12
+        },
+        "highlights": [
+          "Acceso a formación artística",
+          "Fortalecimiento del tejido social",
+          "Espacios seguros de expresión"
+        ]
+      },
+      {
+        "id": "innovacion",
+        "title": "Innovación educativa y digital",
+        "description": "Desarrollo de experiencias interactivas, videojuegos y herramientas digitales para el aprendizaje artístico.",
+        "metrics": {
+          "minigames": 6,
+          "platforms": 3,
+          "users": 900
+        },
+        "highlights": [
+          "Gamificación del aprendizaje",
+          "Integración de tecnología y arte",
+          "Experiencias transmedia"
+        ]
+      },
+      {
+        "id": "cultura",
+        "title": "Circulación cultural",
+        "description": "Producción de eventos, experiencias escénicas y contenidos culturales que conectan con diferentes públicos.",
+        "metrics": {
+          "events": 65,
+          "audience": 4800,
+          "collaborations": 10
+        },
+        "highlights": [
+          "Eventos interdisciplinarios",
+          "Activaciones culturales",
+          "Visibilidad de procesos artísticos"
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "year": "2017",
+        "title": "Inicio de Musicala",
+        "description": "Nacimiento del proyecto con enfoque en formación musical."
+      },
+      {
+        "year": "2019",
+        "title": "Expansión interdisciplinaria",
+        "description": "Integración de danza, teatro y artes plásticas."
+      },
+      {
+        "year": "2022",
+        "title": "Alianzas estratégicas",
+        "description": "Inicio de colaboraciones con organizaciones educativas y culturales."
+      },
+      {
+        "year": "2024",
+        "title": "Innovación digital",
+        "description": "Desarrollo de minijuegos y experiencias interactivas."
+      },
+      {
+        "year": "2026",
+        "title": "Universo Musi",
+        "description": "Consolidación del ecosistema transmedia educativo."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Laura G.",
+        "role": "Estudiante",
+        "quote": "Aprender en Musicala ha sido una experiencia diferente, donde puedo crear y expresarme libremente."
+      },
+      {
+        "name": "Carlos M.",
+        "role": "Padre de familia",
+        "quote": "He visto un cambio positivo en la confianza y creatividad de mi hijo."
+      },
+      {
+        "name": "Andrea R.",
+        "role": "Aliada cultural",
+        "quote": "Trabajar con Musicala ha permitido crear experiencias artísticas con impacto real."
+      }
+    ]
+  }
+}

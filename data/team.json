@@ -1,0 +1,95 @@
+{
+  "team": [
+    {
+      "id": "alek",
+      "name": "Alek Caballero",
+      "role": "Cofundador · Dirección Creativa y Tecnología",
+      "photo": "assets/team/alek.jpg",
+      "bio": "Apasionado por la tecnología, la creación de experiencias interactivas y la integración del arte con herramientas digitales. Lidera el desarrollo de plataformas, videojuegos y sistemas dentro de Musicala.",
+      "skills": [
+        "Desarrollo web",
+        "Gamificación",
+        "Diseño de producto",
+        "Integración tecnológica"
+      ],
+      "focus": [
+        "Ecosistema digital Musicala",
+        "Minijuegos educativos",
+        "Arquitectura de plataformas"
+      ],
+      "social": {
+        "instagram": "",
+        "linkedin": "",
+        "email": ""
+      },
+      "featured": true
+    },
+    {
+      "id": "cata",
+      "name": "Catalina Medina",
+      "role": "Cofundadora · Dirección Pedagógica y Experiencia",
+      "photo": "assets/team/cata.jpg",
+      "bio": "Enfocada en procesos humanos, artísticos y pedagógicos. Lidera la experiencia formativa, la conexión con estudiantes y el desarrollo de metodologías sensibles e integrales.",
+      "skills": [
+        "Pedagogía artística",
+        "Dirección de procesos",
+        "Expresión corporal",
+        "Acompañamiento emocional"
+      ],
+      "focus": [
+        "Metodología Musicala",
+        "Formación integral",
+        "Experiencia del estudiante"
+      ],
+      "social": {
+        "instagram": "",
+        "linkedin": "",
+        "email": ""
+      },
+      "featured": true
+    },
+    {
+      "id": "camila",
+      "name": "Camila Rodríguez",
+      "role": "Administración · Programación Académica",
+      "photo": "assets/team/camila.jpg",
+      "bio": "Encargada de la organización interna y la programación de clases, asegurando el correcto funcionamiento operativo de Musicala.",
+      "skills": [
+        "Gestión administrativa",
+        "Organización",
+        "Programación académica"
+      ],
+      "focus": [
+        "Horarios",
+        "Logística",
+        "Seguimiento operativo"
+      ],
+      "social": {
+        "instagram": "",
+        "linkedin": "",
+        "email": ""
+      },
+      "featured": false
+    },
+    {
+      "id": "docentes",
+      "name": "Equipo Docente",
+      "role": "Artistas · Formadores",
+      "photo": "assets/team/docentes.jpg",
+      "bio": "Equipo interdisciplinario de docentes en música, danza, teatro y artes plásticas que acompañan los procesos formativos de los estudiantes.",
+      "skills": [
+        "Música",
+        "Danza",
+        "Teatro",
+        "Artes plásticas"
+      ],
+      "focus": [
+        "Formación artística",
+        "Acompañamiento",
+        "Procesos creativos"
+      ],
+      "social": {},
+      "featured": true
+    }
+  ]
+}

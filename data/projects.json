@@ -1,0 +1,166 @@
+{
+  "projects": [
+    {
+      "id": "universo_musi",
+      "name": "Universo Musi",
+      "type": "transmedia",
+      "status": "en desarrollo",
+      "year": 2026,
+      "description": "Ecosistema transmedia que integra arte, tecnología y narrativa para enseñar cultura colombiana a través del juego.",
+      "objectives": [
+        "Enseñar arte y cultura desde la experiencia",
+        "Integrar múltiples lenguajes artísticos",
+        "Crear aprendizaje interactivo"
+      ],
+      "components": [
+        "videojuego",
+        "minijuegos",
+        "narrativa",
+        "plataforma web"
+      ],
+      "related": ["minijuego_ritmo", "minijuego_memoria", "minijuego_escenario"],
+      "featured": true
+    },
+    {
+      "id": "minijuego_ritmo",
+      "name": "Atrapa el Ritmo",
+      "type": "videojuego",
+      "status": "en desarrollo",
+      "year": 2026,
+      "description": "Juego interactivo donde el jugador debe seguir patrones rítmicos y coordinar movimientos con la música.",
+      "objectives": [
+        "Desarrollar sentido rítmico",
+        "Mejorar coordinación",
+        "Aprender patrones musicales"
+      ],
+      "components": [
+        "input musical",
+        "feedback visual",
+        "sistema de puntaje"
+      ],
+      "related": ["universo_musi"],
+      "featured": true
+    },
+    {
+      "id": "minijuego_memoria",
+      "name": "Memoria Musical",
+      "type": "videojuego",
+      "status": "en desarrollo",
+      "year": 2026,
+      "description": "Juego que entrena la memoria auditiva a través de secuencias musicales.",
+      "objectives": [
+        "Fortalecer memoria auditiva",
+        "Reconocer patrones",
+        "Estimular concentración"
+      ],
+      "components": [
+        "secuencias sonoras",
+        "niveles progresivos",
+        "feedback inmediato"
+      ],
+      "related": ["universo_musi"],
+      "featured": true
+    },
+    {
+      "id": "minijuego_escenario",
+      "name": "Construye tu Escenario",
+      "type": "videojuego",
+      "status": "en desarrollo",
+      "year": 2026,
+      "description": "Juego creativo donde el jugador diseña escenarios artísticos combinando elementos visuales y sonoros.",
+      "objectives": [
+        "Estimular creatividad",
+        "Explorar composición visual",
+        "Integrar arte y juego"
+      ],
+      "components": [
+        "drag and drop",
+        "elementos visuales",
+        "personalización"
+      ],
+      "related": ["universo_musi"],
+      "featured": true
+    },
+    {
+      "id": "minijuego_colores",
+      "name": "Mezcla Mágica",
+      "type": "videojuego",
+      "status": "en desarrollo",
+      "year": 2026,
+      "description": "Juego donde el jugador mezcla colores para descubrir nuevas combinaciones y conceptos básicos de artes plásticas.",
+      "objectives": [
+        "Aprender teoría del color",
+        "Experimentar visualmente",
+        "Desarrollar intuición artística"
+      ],
+      "components": [
+        "mezcla de colores",
+        "feedback visual",
+        "retos progresivos"
+      ],
+      "related": ["universo_musi"],
+      "featured": false
+    },
+    {
+      "id": "minijuego_teatro",
+      "name": "Emociones del Actor",
+      "type": "videojuego",
+      "status": "en desarrollo",
+      "year": 2026,
+      "description": "Juego donde el jugador interpreta emociones y situaciones para desarrollar expresión escénica.",
+      "objectives": [
+        "Reconocer emociones",
+        "Desarrollar expresión corporal",
+        "Fomentar empatía"
+      ],
+      "components": [
+        "decisiones narrativas",
+        "expresión emocional",
+        "feedback escénico"
+      ],
+      "related": ["universo_musi"],
+      "featured": false
+    },
+    {
+      "id": "alegremente_2025",
+      "name": "AlegreMente 2025",
+      "type": "evento",
+      "status": "en producción",
+      "year": 2025,
+      "description": "Evento artístico interdisciplinario que combina música, danza, teatro y artes visuales en una narrativa escénica.",
+      "objectives": [
+        "Integrar lenguajes artísticos",
+        "Crear experiencia narrativa",
+        "Mostrar procesos formativos"
+      ],
+      "components": [
+        "escenario",
+        "coreografías",
+        "música en vivo",
+        "arte visual"
+      ],
+      "related": ["universo_musi"],
+      "featured": true
+    },
+    {
+      "id": "formacion_artistica",
+      "name": "Programas de Formación Artística",
+      "type": "educacion",
+      "status": "activo",
+      "year": 2017,
+      "description": "Procesos educativos en música, danza, teatro y artes plásticas para diferentes edades.",
+      "objectives": [
+        "Desarrollar habilidades artísticas",
+        "Fomentar creatividad",
+        "Promover expresión"
+      ],
+      "components": [
+        "clases",
+        "talleres",
+        "procesos formativos"
+      ],
+      "related": [],
+      "featured": true
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "timeline": [
+    {
+      "id": "inicio",
+      "year": "2017",
+      "title": "Nacimiento de Musicala",
+      "subtitle": "El inicio de una idea",
+      "description": "Musicala nace como un proyecto enfocado en la enseñanza musical, con una visión centrada en el arte como herramienta de transformación.",
+      "type": "foundation",
+      "related": ["formacion_artistica"],
+      "highlight": true
+    },
+    {
+      "id": "expansion",
+      "year": "2019",
+      "title": "Expansión interdisciplinaria",
+      "subtitle": "Más allá de la música",
+      "description": "Se integran danza, teatro y artes plásticas, consolidando una propuesta de formación artística integral.",
+      "type": "growth",
+      "related": ["formacion_artistica"],
+      "highlight": true
+    },
+    {
+      "id": "comunidad",
+      "year": "2021",
+      "title": "Impacto en comunidades",
+      "subtitle": "El arte como puente social",
+      "description": "Musicala comienza a fortalecer procesos en comunidades, llevando el arte a contextos diversos y ampliando su impacto social.",
+      "type": "social",
+      "related": ["fsa"],
+      "highlight": false
+    },
+    {
+      "id": "alianzas",
+      "year": "2022",
+      "title": "Alianzas estratégicas",
+      "subtitle": "Creciendo en red",
+      "description": "Se consolidan colaboraciones con organizaciones educativas y culturales para expandir el alcance de los procesos artísticos.",
+      "type": "alliances",
+      "related": ["fesicol", "safemode"],
+      "highlight": true
+    },
+    {
+      "id": "eventos",
+      "year": "2024",
+      "title": "Experiencias escénicas",
+      "subtitle": "El arte toma el escenario",
+      "description": "Se fortalecen los eventos y experiencias interdisciplinarias, conectando procesos formativos con públicos reales.",
+      "type": "events",
+      "related": ["alegremente_2025"],
+      "highlight": false
+    },
+    {
+      "id": "digital",
+      "year": "2025",
+      "title": "Transición digital",
+      "subtitle": "El arte entra al juego",
+      "description": "Inicio del desarrollo de herramientas digitales, plataformas y primeras experiencias interactivas.",
+      "type": "innovation",
+      "related": ["minijuego_ritmo", "minijuego_memoria"],
+      "highlight": true
+    },
+    {
+      "id": "universo",
+      "year": "2026",
+      "title": "Universo Musi",
+      "subtitle": "El ecosistema se conecta",
+      "description": "Se consolida un universo transmedia que integra videojuegos, narrativa, educación y cultura en una sola experiencia.",
+      "type": "transmedia",
+      "related": ["universo_musi"],
+      "highlight": true
+    }
+  ]
+}
