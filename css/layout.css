@@ -1,0 +1,582 @@
+/* =========================================================
+   LAYOUT
+   Estructura general, ritmo vertical, grillas y responsive
+========================================================= */
+
+/* =========================================================
+   1. APP / SHELL GENERAL
+========================================================= */
+
+.site-shell {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+}
+
+main {
+  flex: 1 0 auto;
+  position: relative;
+  z-index: var(--z-base);
+}
+
+.site-footer {
+  position: relative;
+  z-index: var(--z-content);
+  margin-top: auto;
+}
+
+.site-footer .footer-inner {
+  min-height: 92px;
+}
+
+/* =========================================================
+   2. RITMO GLOBAL DE SECCIONES
+========================================================= */
+
+section {
+  position: relative;
+  padding-block: var(--section-pad-md);
+}
+
+.section-compact {
+  padding-block: var(--section-pad-sm);
+}
+
+.section-large {
+  padding-block: var(--section-pad-lg);
+}
+
+.section-overlap-top {
+  margin-top: clamp(-2rem, -4vw, -4rem);
+  z-index: 2;
+}
+
+.section-overlap-bottom {
+  margin-bottom: clamp(-2rem, -4vw, -4rem);
+}
+
+/* =========================================================
+   3. HERO
+========================================================= */
+
+.hero-section {
+  position: relative;
+  padding-block: clamp(7.5rem, 12vw, 10rem) clamp(5rem, 8vw, 7rem);
+  overflow: clip;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+  align-items: center;
+  gap: clamp(2.25rem, 4vw, 4.25rem);
+}
+
+.hero-content,
+.hero-visual {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.hero-content {
+  display: grid;
+  align-content: start;
+  gap: 1.4rem;
+}
+
+.hero-copy {
+  display: grid;
+  gap: 1rem;
+  max-width: 690px;
+}
+
+.hero-story-block {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 660px;
+}
+
+.hero-story-block p,
+.hero-copy p,
+.hero-content p {
+  max-width: 62ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hero-highlight-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.hero-highlight-item {
+  min-width: 0;
+}
+
+.hero-visual {
+  display: grid;
+  align-items: center;
+  justify-items: stretch;
+}
+
+.hero-visual > * {
+  width: 100%;
+}
+
+/* =========================================================
+   4. INTRO / STRIP INICIAL
+========================================================= */
+
+.intro-strip {
+  position: relative;
+  padding-block: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.2rem);
+  z-index: 2;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.4rem);
+  align-items: stretch;
+}
+
+/* =========================================================
+   5. BLOQUES DE CONTENIDO GENERALES
+========================================================= */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.cards-grid.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cards-grid.four-col {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* =========================================================
+   6. TIMELINE
+========================================================= */
+
+.timeline-section {
+  overflow: clip;
+}
+
+.timeline-list {
+  position: relative;
+  max-width: 960px;
+  margin-inline: auto;
+  display: grid;
+  gap: 1.4rem;
+  padding-left: 2rem;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  left: 0;
+  width: 2px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary) 0%,
+    var(--color-border-strong) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2.45rem;
+  top: 0.85rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 7px rgba(103, 80, 164, 0.12);
+}
+
+.timeline-year {
+  align-self: start;
+}
+
+.timeline-content {
+  min-width: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+/* =========================================================
+   7. FOCUS / PROPUESTA / ENFOQUE
+========================================================= */
+
+.focus-section {
+  overflow: clip;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: clamp(1.5rem, 3vw, 2.2rem);
+  align-items: start;
+}
+
+.focus-copy {
+  display: grid;
+  gap: 1.1rem;
+  min-width: 0;
+}
+
+.focus-copy p {
+  max-width: 68ch;
+}
+
+.focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.25rem;
+}
+
+.focus-panels {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+/* =========================================================
+   8. WORKLINES / LÍNEAS DE TRABAJO
+========================================================= */
+
+.worklines-section .cards-grid {
+  margin-top: 1.5rem;
+}
+
+/* =========================================================
+   9. PROYECTOS
+========================================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.4rem);
+  align-items: stretch;
+}
+
+/* =========================================================
+   10. IMPACTO / RECONOCIMIENTOS / EQUIPO / EVIDENCIAS
+========================================================= */
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.4rem);
+  margin-top: 1rem;
+}
+
+.recognition-grid,
+.team-grid,
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.4rem);
+  margin-top: 1.5rem;
+}
+
+.coverage-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+/* =========================================================
+   11. CIERRE / CONTACTO
+========================================================= */
+
+.closing-section {
+  overflow: clip;
+}
+
+.closing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.94fr);
+  gap: clamp(1.5rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.closing-copy {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.closing-copy p {
+  max-width: 65ch;
+}
+
+.contact-card {
+  position: sticky;
+  top: calc(var(--header-height, 84px) + 1.25rem);
+  align-self: start;
+}
+
+/* =========================================================
+   12. BLOQUES AUXILIARES
+========================================================= */
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* =========================================================
+   13. RESPONSIVE LARGE
+========================================================= */
+
+@media (max-width: 1180px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.84fr);
+    gap: 2rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .impact-grid,
+  .recognition-grid,
+  .team-grid,
+  .evidence-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   14. RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  section {
+    padding-block: clamp(4.5rem, 8vw, 6rem);
+  }
+
+  .hero-section {
+    padding-block: clamp(7rem, 10vw, 8rem) clamp(4.5rem, 8vw, 5.5rem);
+  }
+
+  .hero-grid,
+  .focus-grid,
+  .closing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    gap: 2rem;
+  }
+
+  .focus-grid,
+  .closing-grid {
+    gap: 1.5rem;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .hero-visual {
+    order: 2;
+  }
+
+  .contact-card {
+    position: relative;
+    top: auto;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid,
+  .cards-grid.two-col,
+  .cards-grid.four-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   15. RESPONSIVE MEDIUM
+========================================================= */
+
+@media (max-width: 820px) {
+  section {
+    padding-block: 5rem;
+  }
+
+  .hero-section {
+    padding-block: 6.8rem 4.8rem;
+  }
+
+  .hero-content {
+    gap: 1.2rem;
+  }
+
+  .hero-copy,
+  .hero-story-block {
+    max-width: 100%;
+  }
+
+  .hero-actions,
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-metrics,
+  .hero-highlight-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-highlight-item {
+    text-align: left;
+  }
+
+  .timeline-list {
+    padding-left: 1.5rem;
+    gap: 1rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .timeline-item::before {
+    left: -1.9rem;
+    top: 0.65rem;
+  }
+
+  .timeline-year {
+    margin-bottom: 0.15rem;
+  }
+
+  .impact-grid,
+  .recognition-grid,
+  .team-grid,
+  .evidence-grid,
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+}
+
+/* =========================================================
+   16. RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+  section {
+    padding-block: 4.5rem;
+  }
+
+  .hero-section {
+    padding-block: 6.2rem 4.2rem;
+  }
+
+  .container,
+  .container-wide,
+  .container-narrow {
+    width: min(100% - 1.4rem, var(--container-max, 1200px));
+  }
+
+  .timeline-list {
+    gap: 0.9rem;
+    padding-left: 1.1rem;
+  }
+
+  .timeline-list::before {
+    left: 0;
+  }
+
+  .timeline-item::before {
+    left: -1.45rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .cards-grid,
+  .projects-grid,
+  .impact-grid,
+  .recognition-grid,
+  .team-grid,
+  .evidence-grid,
+  .coverage-panel,
+  .focus-panels {
+    gap: 1rem;
+  }
+
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions .btn,
+  .contact-actions .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   17. RESPONSIVE SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .hero-section {
+    padding-top: 5.8rem;
+  }
+
+  .timeline-list {
+    padding-left: 0.95rem;
+  }
+
+  .timeline-item::before {
+    left: -1.25rem;
+  }
+}

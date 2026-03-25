@@ -1,0 +1,976 @@
+/* =========================================================
+   SECTIONS
+   Personalidad visual por bloque, fondos, jerarquía y ritmo
+   Paleta: Manual de Identidad Visual Musicala
+========================================================= */
+
+/* =========================================================
+   1. FONDO GLOBAL / ESTADO GENERAL
+========================================================= */
+
+body {
+  background:
+    radial-gradient(circle at 8% 10%,  rgba(87, 41, 255, 0.07), transparent 26%),
+    radial-gradient(circle at 92% 8%,  rgba(206, 0, 113, 0.07), transparent 22%),
+    linear-gradient(180deg, var(--color-debussy, #F9F9F9) 0%, var(--color-haydn, #E6E8E8) 100%);
+}
+
+.site-header.is-scrolled {
+  background: rgba(249, 249, 249, 0.94);
+  box-shadow: 0 12px 36px rgba(12, 10, 30, 0.08);
+}
+
+/* =========================================================
+   2. SECCIONES OSCURAS — .section-dark y .section-dark-chopin
+   Azul Wagner (#0C0A1E) y Azul Chopin (#121223)
+========================================================= */
+
+/* — Base oscuro (Wagner) — */
+.section-dark {
+  position: relative;
+  background: var(--gradient-dark-section,
+    linear-gradient(160deg, #0C0A1E 0%, #120A28 50%, #0A0818 100%)
+  );
+  overflow: hidden;
+}
+
+/* Manchas de color del gradiente del logo sobre el fondo oscuro */
+.section-dark::before {
+  content: "";
+  position: absolute;
+  top: -8%;
+  left: -6%;
+  width: 420px;
+  height: 420px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(87, 41, 255, 0.18), transparent 70%);
+  filter: blur(48px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-dark::after {
+  content: "";
+  position: absolute;
+  bottom: -8%;
+  right: -4%;
+  width: 340px;
+  height: 340px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(206, 0, 113, 0.16), transparent 70%);
+  filter: blur(42px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Todos los hijos directos sobre el z-index de los orbes */
+.section-dark > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* — Variante Chopin (#121223) — */
+.section-dark-chopin {
+  background: var(--gradient-dark-section-chopin,
+    linear-gradient(160deg, #121223 0%, #17162E 50%, #0F0E20 100%)
+  );
+}
+
+.section-dark-chopin::before {
+  background: radial-gradient(circle, rgba(58, 180, 232, 0.14), transparent 70%);
+}
+
+.section-dark-chopin::after {
+  background: radial-gradient(circle, rgba(87, 41, 255, 0.16), transparent 70%);
+}
+
+/* — Divisor luminoso entre secciones claro → oscuro — */
+.section-dark + section,
+section + .section-dark {
+  position: relative;
+}
+
+/* =========================================================
+   3. ENCABEZADOS DE SECCIÓN
+========================================================= */
+
+.section-heading {
+  position: relative;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 1rem;
+}
+
+.section-heading h2 {
+  max-width: 14ch;
+}
+
+.section-heading p {
+  max-width: 64ch;
+}
+
+.section-heading.centered h2,
+.section-heading.centered p {
+  margin-inline: auto;
+  max-width: 22ch;
+}
+
+.section-heading.centered p {
+  max-width: 64ch;
+}
+
+/* =========================================================
+   4. HERO — fondo claro con manchas del logo
+========================================================= */
+
+.hero-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(87, 41, 255, 0.13), transparent 22%),
+    radial-gradient(circle at 88% 14%, rgba(206, 0, 113, 0.11), transparent 18%),
+    radial-gradient(circle at 55% 90%, rgba(58, 180, 232, 0.07), transparent 20%),
+    linear-gradient(135deg, #faf9ff 0%, #f6f4ff 44%, #f9f9f9 100%);
+}
+
+/* Orbe izquierdo — Vivaldi */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: auto auto 16% -7%;
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(87, 41, 255, 0.14), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+/* Orbe derecho — Brahms */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 6% -5% auto auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(206, 0, 113, 0.14), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.hero-content h1 {
+  max-width: 12ch;
+  margin-bottom: 0.9rem;
+  letter-spacing: -0.04em;
+  color: var(--color-bach, #220A63);
+}
+
+.hero-content .eyebrow-script {
+  margin-bottom: 0.6rem;
+}
+
+.hero-lead {
+  max-width: 62ch;
+  font-size: clamp(1.02rem, 1.15vw, 1.1rem);
+  color: var(--text-soft, #4A4A5A);
+  font-weight: 300;
+}
+
+.hero-copy p:last-child,
+.hero-story-block p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-glass-card {
+  position: relative;
+  width: min(100%, 470px);
+  box-shadow:
+    0 26px 72px rgba(12, 10, 30, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  overflow: hidden;
+}
+
+.hero-glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.16)),
+    linear-gradient(180deg, rgba(87, 41, 255, 0.04), rgba(206, 0, 113, 0.03));
+  pointer-events: none;
+}
+
+.hero-card-top,
+.hero-story-block,
+.hero-highlight-list {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-card-top {
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.hero-story-block h2 {
+  margin-bottom: 0.35rem;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  color: var(--color-bach, #220A63);
+}
+
+.hero-story-block p {
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.hero-highlight-list {
+  gap: 0.8rem;
+}
+
+.hero-highlight-item {
+  min-width: 0;
+  padding: 0.85rem 0.75rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(87, 41, 255, 0.10);
+}
+
+.highlight-label {
+  display: block;
+  margin-bottom: 0.28rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--text-light, #A0A0B8);
+}
+
+.hero-highlight-item strong {
+  color: var(--color-bach, #220A63);
+  font-weight: 700;
+}
+
+.hero-metrics .metric-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px rgba(12, 10, 30, 0.06);
+  border: 1px solid rgba(87, 41, 255, 0.08);
+}
+
+.metric-card strong {
+  margin-bottom: 0.35rem;
+  color: var(--color-vivaldi, #5729FF);
+}
+
+/* =========================================================
+   5. INTRO — Quiénes somos
+========================================================= */
+
+.intro-strip {
+  background:
+    linear-gradient(180deg, var(--color-debussy, #F9F9F9) 0%, #ffffff 100%);
+}
+
+.intro-card {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 34px rgba(12, 10, 30, 0.06);
+  border: 1px solid rgba(87, 41, 255, 0.08);
+}
+
+.card-kicker {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-beethoven, #680DBF);
+}
+
+.intro-card p {
+  margin-top: 0.55rem;
+  font-weight: 300;
+}
+
+/* =========================================================
+   6. TIMELINE — fondo OSCURO (Wagner)
+========================================================= */
+
+/* El fondo oscuro lo pone .section-dark en el HTML */
+/* Aquí solo definimos los estilos de los items */
+
+.timeline-item {
+  padding: 1.35rem 1.5rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.timeline-item h3 {
+  color: var(--color-heading-on-dark, #FFFFFF);
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+}
+
+.timeline-item p {
+  color: var(--color-text-on-dark, rgba(255, 255, 255, 0.72));
+  font-weight: 300;
+}
+
+/* El año — pill con gradiente del logo */
+.timeline-year {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.7rem 0.95rem;
+  border-radius: 999px;
+  background: var(--gradient-brand,
+    linear-gradient(135deg, #3AB4E8 0%, #0C41C4 28%, #5729FF 55%, #680DBF 75%, #CE0071 100%)
+  );
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 0.9rem;
+  box-shadow:
+    0 6px 24px rgba(87, 41, 255, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Línea vertical de la timeline sobre fondo oscuro */
+.timeline-list::before {
+  background: linear-gradient(
+    180deg,
+    rgba(87, 41, 255, 0.0) 0%,
+    rgba(87, 41, 255, 0.5) 15%,
+    rgba(206, 0, 113, 0.5) 85%,
+    rgba(206, 0, 113, 0.0) 100%
+  );
+}
+
+/* =========================================================
+   7. FOCUS — Enfoque
+========================================================= */
+
+.focus-section {
+  background:
+    radial-gradient(circle at 10% 16%, rgba(87, 41, 255, 0.06), transparent 22%),
+    linear-gradient(180deg, #ffffff 0%, var(--color-haydn, #E6E8E8) 100%);
+}
+
+.focus-copy p {
+  max-width: 68ch;
+  font-weight: 300;
+}
+
+.focus-panels .panel-card {
+  background: rgba(255, 255, 255, 0.90);
+  box-shadow: 0 18px 42px rgba(12, 10, 30, 0.06);
+  border: 1px solid rgba(87, 41, 255, 0.08);
+}
+
+.panel-kicker {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-beethoven, #680DBF);
+}
+
+.method-list {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.method-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text-soft, #4A4A5A);
+  font-weight: 300;
+}
+
+/* La letra CREA — usando el gradiente del logo */
+.method-list strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--gradient-primary,
+    linear-gradient(135deg, #5729FF 0%, #680DBF 52%, #CE0071 100%)
+  );
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex: 0 0 auto;
+  box-shadow: 0 4px 12px rgba(87, 41, 255, 0.28);
+}
+
+/* =========================================================
+   8. LÍNEAS DE TRABAJO
+========================================================= */
+
+.worklines-section {
+  background:
+    linear-gradient(180deg, #ffffff 0%, var(--color-debussy, #F9F9F9) 100%);
+}
+
+.work-card {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 36px rgba(12, 10, 30, 0.05);
+  border: 1px solid rgba(87, 41, 255, 0.07);
+}
+
+.work-card h3 {
+  margin-bottom: 0.65rem;
+  color: var(--color-bach, #220A63);
+}
+
+/* =========================================================
+   9. PROYECTOS
+========================================================= */
+
+.projects-section {
+  background:
+    radial-gradient(circle at 84% 12%, rgba(87, 41, 255, 0.06), transparent 18%),
+    radial-gradient(circle at 14% 88%, rgba(206, 0, 113, 0.05), transparent 18%),
+    linear-gradient(180deg, #ffffff 0%, var(--color-debussy, #F9F9F9) 100%);
+}
+
+.project-card {
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(249, 249, 249, 0.94));
+  box-shadow: 0 18px 42px rgba(12, 10, 30, 0.06);
+  border: 1px solid rgba(87, 41, 255, 0.08);
+}
+
+.project-card h3 {
+  margin: 0.7rem 0 0.65rem;
+  font-size: 1.22rem;
+  color: var(--color-bach, #220A63);
+}
+
+.project-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-vivaldi, #5729FF);
+}
+
+.project-points {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.project-points li {
+  position: relative;
+  padding-left: 1.05rem;
+  color: var(--text-soft, #4A4A5A);
+  font-weight: 300;
+  font-size: 0.92rem;
+}
+
+/* Bullet con gradiente del logo */
+.project-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--gradient-primary,
+    linear-gradient(135deg, #5729FF 0%, #CE0071 100%)
+  );
+  transform: translateY(-50%);
+}
+
+.project-video-block {
+  position: relative;
+}
+
+.project-video-block .section-heading h3 {
+  font-size: clamp(1.4rem, 1.7vw, 1.85rem);
+  color: var(--color-bach, #220A63);
+}
+
+.project-link-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.2rem 1.25rem;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 249, 249, 0.96));
+  border: 1px solid rgba(87, 41, 255, 0.10);
+  box-shadow: 0 18px 40px rgba(12, 10, 30, 0.05);
+}
+
+/* =========================================================
+   10. IMPACTO — fondo OSCURO (Chopin)
+========================================================= */
+
+/* El fondo oscuro lo pone .section-dark.section-dark-chopin en el HTML */
+
+/* Cards de impacto sobre oscuro */
+.impact-section .impact-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(10px);
+}
+
+.impact-card strong {
+  font-size: clamp(2rem, 2.8vw, 2.6rem);
+  letter-spacing: -0.04em;
+  background: var(--gradient-brand,
+    linear-gradient(135deg, #3AB4E8 0%, #5729FF 50%, #CE0071 100%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.impact-card span {
+  color: var(--color-text-on-dark, rgba(255, 255, 255, 0.72));
+  font-weight: 300;
+}
+
+/* Panel de cobertura sobre oscuro */
+.impact-section .coverage-panel {
+  padding: 1.7rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(8px);
+}
+
+.impact-section .coverage-copy h3 {
+  color: var(--color-heading-on-dark, #FFFFFF);
+  margin-bottom: 0.5rem;
+}
+
+.impact-section .coverage-copy p {
+  color: var(--color-text-on-dark, rgba(255, 255, 255, 0.72));
+  font-weight: 300;
+}
+
+/* =========================================================
+   11. RECONOCIMIENTOS
+========================================================= */
+
+.recognition-section {
+  background:
+    radial-gradient(circle at 14% 14%, rgba(206, 0, 113, 0.06), transparent 16%),
+    linear-gradient(180deg, #ffffff 0%, var(--color-debussy, #F9F9F9) 100%);
+}
+
+.recognition-card {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 40px rgba(12, 10, 30, 0.05);
+  border: 1px solid rgba(87, 41, 255, 0.08);
+}
+
+.recognition-card h3 {
+  margin: 0.55rem 0 0.65rem;
+  color: var(--color-bach, #220A63);
+}
+
+.recognition-badge {
+  display: inline-block;
+  padding: 0.32rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.70rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  background: var(--gradient-primary,
+    linear-gradient(135deg, #5729FF 0%, #680DBF 52%, #CE0071 100%)
+  );
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(87, 41, 255, 0.24);
+}
+
+/* =========================================================
+   12. ALIANZAS
+========================================================= */
+
+.alliances-section {
+  background:
+    linear-gradient(180deg, var(--color-haydn, #E6E8E8) 0%, #ffffff 100%);
+}
+
+.alliance-cloud span {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(87, 41, 255, 0.10);
+  box-shadow: 0 10px 24px rgba(12, 10, 30, 0.04);
+  color: var(--text-soft, #4A4A5A);
+}
+
+/* Cards dentro del carrusel de alianzas */
+.alliances-section .work-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(87, 41, 255, 0.08);
+}
+
+.alliances-section .work-card h3 {
+  color: var(--color-bach, #220A63);
+}
+
+/* =========================================================
+   13. EQUIPO
+========================================================= */
+
+.team-section {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(87, 41, 255, 0.05), transparent 16%),
+    linear-gradient(180deg, #ffffff 0%, var(--color-debussy, #F9F9F9) 100%);
+}
+
+.team-card {
+  height: 100%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(12, 10, 30, 0.05);
+  border: 1px solid rgba(87, 41, 255, 0.08);
+}
+
+.team-photo {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  object-position: center top;
+  border-radius: 18px;
+  margin-bottom: 16px;
+  display: block;
+  background: var(--color-haydn, #E6E8E8);
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.team-photo-portrait {
+  object-position: center top;
+}
+
+.team-card h3 {
+  margin-bottom: 0.4rem;
+  color: var(--color-bach, #220A63);
+}
+
+.team-role {
+  display: block;
+  font-size: 0.80rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--color-vivaldi, #5729FF);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   14. EVIDENCIAS
+========================================================= */
+
+.evidence-section {
+  background:
+    linear-gradient(180deg, var(--color-debussy, #F9F9F9) 0%, #ffffff 100%);
+}
+
+.gallery-grid {
+  align-items: stretch;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 40px rgba(12, 10, 30, 0.06);
+  border: 1px solid rgba(87, 41, 255, 0.07);
+  /* Borde superior con gradiente del logo */
+  border-top: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-brand,
+    linear-gradient(90deg, #3AB4E8 0%, #5729FF 50%, #CE0071 100%)
+  );
+  border-radius: 22px 22px 0 0;
+  z-index: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-visible img {
+  transform: scale(1.03);
+}
+
+.evidence-card {
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(249, 249, 249, 0.95));
+  box-shadow: 0 18px 40px rgba(12, 10, 30, 0.05);
+  border: 1px solid rgba(87, 41, 255, 0.07);
+}
+
+.evidence-card h3 {
+  margin-bottom: 0.65rem;
+  color: var(--color-bach, #220A63);
+}
+
+/* =========================================================
+   15. CIERRE / CONTACTO — fondo OSCURO (Wagner)
+========================================================= */
+
+/* El fondo oscuro lo pone .section-dark en el HTML */
+
+.closing-copy h2 {
+  max-width: 15ch;
+  color: var(--color-heading-on-dark, #FFFFFF);
+}
+
+.closing-copy p {
+  color: var(--color-text-on-dark, rgba(255, 255, 255, 0.75));
+  font-weight: 300;
+  max-width: 58ch;
+}
+
+/* Card de contacto sobre fondo oscuro */
+.closing-section .contact-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(18px);
+}
+
+.closing-section .contact-card h3 {
+  color: var(--color-heading-on-dark, #FFFFFF);
+  margin-bottom: 0.5rem;
+}
+
+.closing-section .contact-list li {
+  color: var(--color-text-on-dark, rgba(255, 255, 255, 0.72));
+  font-weight: 300;
+}
+
+.closing-section .contact-list strong {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 700;
+}
+
+/* Línea divisora dentro de la card de contacto */
+.contact-list {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  margin-bottom: 1.25rem;
+}
+
+/* =========================================================
+   16. FOOTER — fondo oscuro continuado
+========================================================= */
+
+.site-footer {
+  background: var(--color-wagner, #0C0A1E);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-inner {
+  gap: 1rem;
+}
+
+.footer-brand strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.footer-brand span {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.40);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.footer-copy {
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+/* Filtro para el logo en el footer (modo claro del logo sobre oscuro) */
+.footer-logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+/* =========================================================
+   17. RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .hero-content h1,
+  .closing-copy h2,
+  .section-heading h2 {
+    max-width: none;
+  }
+
+  .hero-visual {
+    justify-content: flex-start;
+  }
+
+  .hero-glass-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero-glass-card,
+  .timeline-item,
+  .impact-section .coverage-panel,
+  .closing-section .contact-card,
+  .gallery-item,
+  .project-link-card {
+    border-radius: 20px;
+  }
+
+  .timeline-item {
+    padding: 1.15rem 1.15rem 1.15rem 1.2rem;
+  }
+
+  .hero-story-block h2 {
+    font-size: 1.22rem;
+  }
+
+  .team-photo {
+    height: 300px;
+  }
+
+  .gallery-item img {
+    height: 200px;
+  }
+
+  /* En móvil los orbes de las secciones oscuras se reducen */
+  .section-dark::before {
+    width: 260px;
+    height: 260px;
+  }
+
+  .section-dark::after {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section::before,
+  .hero-section::after {
+    opacity: 0.55;
+  }
+
+  .hero-lead {
+    font-size: 0.98rem;
+  }
+
+  .hero-highlight-item,
+  .timeline-item,
+  .impact-section .coverage-panel,
+  .project-card,
+  .impact-card,
+  .recognition-card,
+  .team-card,
+  .evidence-card,
+  .work-card,
+  .intro-card,
+  .panel-card,
+  .closing-section .contact-card,
+  .gallery-item,
+  .project-link-card {
+    box-shadow: 0 10px 24px rgba(12, 10, 30, 0.08);
+  }
+
+  .alliance-cloud {
+    justify-content: flex-start;
+  }
+
+  .team-photo {
+    height: 260px;
+    border-radius: 16px;
+  }
+
+  .gallery-item {
+    border-radius: 18px;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+
+  /* Secciones oscuras en móvil — orbes más pequeños */
+  .section-dark::before,
+  .section-dark::after {
+    width: 160px;
+    height: 160px;
+    filter: blur(32px);
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-story-block h2,
+  .project-card h3,
+  .impact-card strong {
+    word-break: break-word;
+  }
+
+  .team-photo {
+    height: 220px;
+  }
+
+  .gallery-item img {
+    height: 160px;
+  }
+}

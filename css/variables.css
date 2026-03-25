@@ -1,0 +1,391 @@
+:root {
+  /* =========================================================
+     1. BRAND / IDENTIDAD
+     Colores exactos del Manual de Identidad Visual de Musicala
+  ========================================================= */
+
+  /* — Colores Primarios (del símbolo) — */
+  --color-bach:       #220A63; /* Azul Bach — texto del logo sobre blanco */
+  --color-mozart:     #0C41C4; /* Azul Mozart */
+  --color-beethoven:  #680DBF; /* Violeta Beethoven */
+  --color-vivaldi:    #5729FF; /* Violeta Vivaldi — principal de UI */
+  --color-brahms:     #CE0071; /* Magenta Brahms — acento fuerte */
+
+  /* — Colores Secundarios (fondos y texto) — */
+  --color-wagner:     #0C0A1E; /* Azul Wagner — fondo oscuro profundo */
+  --color-chopin:     #121223; /* Azul Chopin — fondo oscuro variante */
+  --color-tchaikovsky:#232323; /* Gris Tchaikovsky — texto párrafos */
+  --color-haydn:      #E6E8E8; /* Gris Haydn — fondos suaves */
+  --color-debussy:    #F9F9F9; /* Blanco Debussy — fondo claro principal */
+
+  /* — Alias semánticos de UI — */
+  --color-primary:       var(--color-vivaldi);
+  --color-primary-dark:  var(--color-beethoven);
+  --color-primary-hover: #4318e8;
+  --color-primary-soft:  rgba(87, 41, 255, 0.12);
+  --color-primary-faint: rgba(87, 41, 255, 0.06);
+
+  --color-secondary:      var(--color-brahms);
+  --color-secondary-dark: #b0005f;
+  --color-secondary-soft: rgba(206, 0, 113, 0.12);
+  --color-secondary-faint:rgba(206, 0, 113, 0.06);
+
+  /* Acento: el cyan del gradiente del logo */
+  --color-accent:      #3AB4E8;
+  --color-accent-dark: #1A9ED6;
+  --color-accent-soft: rgba(58, 180, 232, 0.14);
+  --color-accent-faint:rgba(58, 180, 232, 0.06);
+
+  /* Highlight / violeta medio del gradiente */
+  --color-highlight:      var(--color-beethoven);
+  --color-highlight-soft: rgba(104, 13, 191, 0.14);
+
+  /* Alias cortos */
+  --primary:        var(--color-primary);
+  --primary-dark:   var(--color-primary-dark);
+  --primary-soft:   var(--color-primary-soft);
+  --secondary:      var(--color-secondary);
+  --secondary-soft: var(--color-secondary-soft);
+  --accent:         var(--color-accent);
+  --accent-soft:    var(--color-accent-soft);
+
+  /* =========================================================
+     2. FONDOS — modo claro
+  ========================================================= */
+
+  --color-bg:       var(--color-debussy);   /* #F9F9F9 */
+  --color-bg-soft:  var(--color-haydn);     /* #E6E8E8 */
+  --color-bg-alt:   #EDEDF5;               /* tono intermedio */
+  --color-bg-muted: #EAEAF2;
+  --color-bg-deep:  #DDDDE8;
+
+  --color-surface:        rgba(255, 255, 255, 0.84);
+  --color-surface-strong: rgba(255, 255, 255, 0.94);
+  --color-surface-solid:  #ffffff;
+  --color-surface-muted:  rgba(249, 249, 249, 0.92);
+  --color-surface-dark-texture: rgba(12, 10, 30, 0.04);
+
+  --bg:             var(--color-bg);
+  --bg-soft:        var(--color-bg-soft);
+  --bg-alt:         var(--color-bg-alt);
+  --surface:        var(--color-surface);
+  --surface-strong: var(--color-surface-strong);
+  --surface-solid:  var(--color-surface-solid);
+
+  /* =========================================================
+     2b. FONDOS — modo oscuro (secciones section-dark)
+  ========================================================= */
+
+  --color-bg-dark:          var(--color-wagner);  /* #0C0A1E */
+  --color-bg-dark-chopin:   var(--color-chopin);  /* #121223 */
+
+  --color-surface-dark:     rgba(18, 18, 35, 0.88);
+  --color-surface-dark-card:rgba(255, 255, 255, 0.06);
+  --color-surface-dark-hover:rgba(255, 255, 255, 0.10);
+
+  --color-border-dark-mode: rgba(255, 255, 255, 0.10);
+  --color-border-dark-strong:rgba(255, 255, 255, 0.18);
+
+  /* =========================================================
+     3. TEXTO
+  ========================================================= */
+
+  --color-heading:       var(--color-bach);        /* #220A63 */
+  --color-heading-soft:  #2E1A70;
+  --color-text:          var(--color-tchaikovsky); /* #232323 */
+  --color-text-soft:     #4A4A5A;
+  --color-text-muted:    #7A7A90;
+  --color-text-light:    #A0A0B8;
+  --color-text-inverse:  #F9F9F9;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Alias semánticos */
+  --heading:     var(--color-heading);
+  --text-strong: var(--color-heading);
+  --text:        var(--color-text);
+  --text-soft:   var(--color-text-soft);
+  --muted:       var(--color-text-muted);
+  --text-light:  var(--color-text-light);
+
+  /* =========================================================
+     3b. TEXTO — sobre fondos oscuros
+  ========================================================= */
+
+  --color-heading-on-dark: #FFFFFF;
+  --color-text-on-dark:    rgba(255, 255, 255, 0.82);
+  --color-text-soft-on-dark: rgba(255, 255, 255, 0.55);
+  --color-muted-on-dark:   rgba(255, 255, 255, 0.38);
+
+  /* =========================================================
+     4. BORDES Y LÍNEAS
+  ========================================================= */
+
+  --color-border:        rgba(87, 41, 255, 0.14);
+  --color-border-soft:   rgba(87, 41, 255, 0.08);
+  --color-border-strong: rgba(87, 41, 255, 0.22);
+  --color-border-neutral:rgba(12, 10, 30, 0.08);
+  --color-divider:       rgba(100, 100, 140, 0.16);
+
+  --border:        var(--color-border);
+  --border-soft:   var(--color-border-soft);
+  --border-strong: var(--color-border-strong);
+
+  /* =========================================================
+     5. ESTADOS
+  ========================================================= */
+
+  --color-success:      #22c55e;
+  --color-success-soft: rgba(34, 197, 94, 0.14);
+
+  --color-warning:      #f59e0b;
+  --color-warning-soft: rgba(245, 158, 11, 0.14);
+
+  --color-error:        #ef4444;
+  --color-error-soft:   rgba(239, 68, 68, 0.14);
+
+  --color-info:         #3b82f6;
+  --color-info-soft:    rgba(59, 130, 246, 0.14);
+
+  /* =========================================================
+     6. GRADIENTES
+     Fiel al gradiente del símbolo: cyan-azul → violeta → magenta
+  ========================================================= */
+
+  /* Gradiente principal del logo (cyan → violeta → magenta) */
+  --gradient-brand: linear-gradient(
+    135deg,
+    #3AB4E8 0%,
+    #0C41C4 28%,
+    #5729FF 55%,
+    #680DBF 75%,
+    #CE0071 100%
+  );
+
+  /* Versión más suave para fondos y cards */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #5729FF 0%,
+    #680DBF 52%,
+    #CE0071 100%
+  );
+
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #CE0071 0%,
+    #E0408A 100%
+  );
+
+  --gradient-accent: linear-gradient(
+    135deg,
+    #3AB4E8 0%,
+    #0C41C4 100%
+  );
+
+  /* Gradientes de fondo suave — modo claro */
+  --gradient-soft: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(249, 249, 249, 0.92) 100%
+  );
+
+  --gradient-surface: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(249, 249, 249, 0.88) 100%
+  );
+
+  /* Hero: fondos muy sutiles con manchas del logo */
+  --gradient-hero: linear-gradient(
+    135deg,
+    #faf9ff 0%,
+    #f7f5ff 44%,
+    #f9f9f9 100%
+  );
+
+  --gradient-hero-soft: radial-gradient(
+      circle at 12% 18%,
+      rgba(87, 41, 255, 0.09),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 84% 16%,
+      rgba(206, 0, 113, 0.10),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(58, 180, 232, 0.06),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      var(--color-debussy) 0%,
+      var(--color-haydn) 100%
+    );
+
+  /* Gradiente oscuro para secciones dark */
+  --gradient-dark-section: linear-gradient(
+    160deg,
+    #0C0A1E 0%,
+    #120A28 50%,
+    #0A0818 100%
+  );
+
+  --gradient-dark-section-chopin: linear-gradient(
+    160deg,
+    #121223 0%,
+    #17162E 50%,
+    #0F0E20 100%
+  );
+
+  /* Glow para cards en dark */
+  --gradient-card-glow-dark: linear-gradient(
+    135deg,
+    rgba(87, 41, 255, 0.12) 0%,
+    rgba(206, 0, 113, 0.10) 55%,
+    rgba(58, 180, 232, 0.08) 100%
+  );
+
+  /* Glow para cards en claro */
+  --gradient-card-glow: linear-gradient(
+    135deg,
+    rgba(87, 41, 255, 0.06) 0%,
+    rgba(206, 0, 113, 0.06) 55%,
+    rgba(58, 180, 232, 0.06) 100%
+  );
+
+  /* =========================================================
+     7. SOMBRAS
+  ========================================================= */
+
+  --shadow-xs: 0 4px 12px  rgba(12, 10, 30, 0.05);
+  --shadow-sm: 0 10px 24px rgba(12, 10, 30, 0.07);
+  --shadow-md: 0 18px 42px rgba(12, 10, 30, 0.09);
+  --shadow-lg: 0 28px 70px rgba(12, 10, 30, 0.13);
+  --shadow-xl: 0 40px 110px rgba(12, 10, 30, 0.18);
+
+  --shadow-soft:  0 18px 50px rgba(12, 10, 30, 0.08);
+  --shadow-card:  0 20px 55px rgba(12, 10, 30, 0.09);
+  --shadow-hover: 0 24px 64px rgba(12, 10, 30, 0.14);
+
+  /* Glow coloreado — usando el primario Vivaldi */
+  --shadow-glow:  0 0 0 6px  rgba(87, 41, 255, 0.10);
+  --shadow-focus: 0 0 0 4px  rgba(87, 41, 255, 0.22);
+
+  /* Glow del gradiente del logo */
+  --shadow-brand-glow: 0 8px 32px rgba(87, 41, 255, 0.22),
+                       0 2px 8px  rgba(206, 0, 113, 0.16);
+
+  /* =========================================================
+     8. RADIO / ESQUINAS
+  ========================================================= */
+
+  --radius-2xs: 4px;
+  --radius-xs:  8px;
+  --radius-sm:  12px;
+  --radius-md:  18px;
+  --radius-lg:  24px;
+  --radius-xl:  32px;
+  --radius-2xl: 40px;
+  --radius-pill:999px;
+
+  /* =========================================================
+     9. ESPACIADO
+  ========================================================= */
+
+  --space-2xs: 4px;
+  --space-xs:  8px;
+  --space-sm:  12px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 88px;
+  --space-5xl: 120px;
+
+  --section-pad-sm: clamp(3rem,   6vw,  4.5rem);
+  --section-pad-md: clamp(4.25rem, 8vw,  7.5rem);
+  --section-pad-lg: clamp(5.5rem, 10vw,  9rem);
+
+  --container-max:    1200px;
+  --container-wide:   1320px;
+  --container-narrow:  880px;
+
+  /* =========================================================
+     10. TIPOGRAFÍA
+     Manual: Roboto (primaria) + Sacramento (títulos decorativos)
+  ========================================================= */
+
+  --font-main:    "Roboto", system-ui, -apple-system, sans-serif;
+  --font-display: "Roboto", system-ui, sans-serif;
+  --font-script:  "Sacramento", cursive;
+  --font-mono:    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-md:   1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  4rem;
+
+  --leading-tight:   1.15;
+  --leading-snug:    1.3;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.8;
+
+  --tracking-tight:  -0.03em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.06em;
+  --tracking-wider:   0.14em;
+
+  /* =========================================================
+     11. BOTONES / INPUTS / HEADER
+  ========================================================= */
+
+  --button-height-sm: 42px;
+  --button-height-md: 50px;
+  --button-height-lg: 58px;
+
+  --input-height:           54px;
+  --header-height:          84px;
+  --header-height-scrolled: 72px;
+
+  /* =========================================================
+     12. MOTION / TRANSICIONES
+  ========================================================= */
+
+  --transition-fast:   0.18s ease;
+  --transition-normal: 0.3s  ease;
+  --transition-slow:   0.45s ease;
+  --transition-spring: 0.5s  cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* =========================================================
+     13. CAPAS / Z-INDEX
+  ========================================================= */
+
+  --z-base:     1;
+  --z-content:  10;
+  --z-header:   100;
+  --z-dropdown: 200;
+  --z-overlay:  500;
+  --z-modal:    700;
+  --z-toast:    900;
+
+  /* =========================================================
+     14. ACCESIBILIDAD / SISTEMA
+  ========================================================= */
+
+  --focus-ring:     rgba(87, 41, 255, 0.22);
+  --selection-bg:   rgba(34, 10, 99, 0.80);  /* Bach oscuro */
+  --selection-text: #ffffff;
+  --surface-border: rgba(255, 255, 255, 0.52);
+
+  color-scheme: light;
+}
